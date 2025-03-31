@@ -35,7 +35,7 @@ img {
     nav {
         flex-direction: column;
         align-items: center;
-        padding: 0.625em;  /* Reduced padding to save space */
+        padding: 0.3em; /* Padding */
         position: relative; /* Change fixed positioning to relative */
         margin-top: 0; /* Remove margin at the top of nav */
         width: 100%;
@@ -46,8 +46,9 @@ img {
         display: block;
         width: 100%;
         text-align: center;
-        padding: 0.625em;  /* Reduced padding to save space */
-        font-size: 1.2em;
+        padding: 0.5em;  /* Reduced padding to save space */
+        font-size: 1em;
+        flex-wrap: wrap;
         font-weight: bold;
     }
     img {
