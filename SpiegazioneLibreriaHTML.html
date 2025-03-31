@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria</title>
+    <link rel="stylesheet" href="SpiegazioneLibreriaCSS.css">
+</head>
+<body>
+    <!-- Sezione del nav -->
+    <nav>
+        <a href="#home">INTRODUZIONE</a>
+        <a href="#installazione">INSTALLAZIONE</a>
+        <a href="#manuale">MANUALE UTENTE</a>
+        <a href="#creazione">CREAZIONE DELLA LIBRERIA</a>
+        <a href="#FAQ">FAQ</a>
+        <a href="#footer">Github</a>
+        <!-- Per FAQ, fai che gli utenti possano scrivere commenti e che possano essere risposti-->
+    </nav>
+    <section id="home">
+        <img src="libreriajava.png" alt="Immagine del programma LIBRERIA">
+
+        <h1>Introduzione alla LIBRERIA</h1>
+        <img src="" alt="Immagine del programma LIBRERIA">
+        <p>La LIBRERIA è un archivio di dati che ti consente di inserire libri, eliminarli, modificarli e cercarli per alcuni criteri.</p>
+    </section>
+    <section id="installazione">
+        <h1>Installazione della libreria</h1>
+        <p>Essendo un programma scritto in java, assicurati di avere Java installato sulla tua macchina. Successivamente, segui questi passaggi:</p>
+        <ol>
+            <li>Scarica il file JAR dalla repository GitHub che trovi alla <a href="#footer">fine della pagina</a>.</li>
+            <li>Apri il terminale e naviga nella cartella dove hai scaricato il file.</li>
+            <li>Esegui il comando: <code>java -jar Libreria.jar</code>.</li>
+        </ol>
+    </section>
+    <section id="manuale">
+        <h1>Manuale dell'utente</h1>
+        <p>Ecco qualche aiuto per iniziare ad archiviare dei libri_</p>
+        <h2>Aggiungere un libro</h2>
+        <p>Per aggiungere un libro alla libreria, clicca sul pulsante "Aggiungi libro", inserisci i dettagli richiesti (titolo, autore, genere), e conferma.</p>
+
+<h2>Ricerca per titolo</h2>
+<p>Puoi cercare un libro per titolo cliccando sul pulsante "Cerca". Inserisci il titolo del libro e visualizza i risultati.</p>
+    </section>
+    <section id="creazione">
+        <h1>Come è stato creato la Libreria?</h1>
+        <p>La libreriaJAVA, come nel suo nome, è stata sviluppata utilizzando Java tramite l'uso della libreria Swing per la creazione dell'interfaccia grafica e dei file di testo per la memorizzazione dei dati.</p>
+
+        <h2>Gestione dei Dati</h2>
+        <p>I dati dei libri vengono memorizzati in un file di testo, dove ogni libro è rappresentato da un blocco di informazioni che contiene il titolo, autore, e altre caratteristiche.</p>
+    </section>
+    <section id="FAQ">
+        <h1>Frequently Asked Questions</h1>
+        <h2>Domanda 1: Come aggiungere un libro?</h2>
+        <button class="faq-button">Risposta</button>
+        <p class="faq-answer">Per aggiungere un libro, clicca sul pulsante "Aggiungi libro"...</p>
+
+        <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+        document.querySelectorAll(".faq-button").forEach(button => {
+            button.addEventListener("click", function() {
+                let answer = this.nextElementSibling;
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+            });
+        });
+        </script>
+
+    </section>
+    <section id="footer">
+        <p>&copy; 2025 Libreria. All rights reserved.</p>
+        <p><a href="https://github.com/yourusername/yourrepository">Scarica il progetto da GitHub</a></p>        
+    </section>
+</body>
+</html>
