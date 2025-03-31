@@ -42,7 +42,7 @@
 <h2>Ricerca per titolo</h2>
 <p>Puoi cercare un libro per titolo cliccando sul pulsante "Cerca". Inserisci il titolo del libro e visualizza i risultati.</p>
     </section>
-    <section id="creazione">
+    <section id="creazione">\
         <h1>Come è stato creato la Libreria?</h1>
         <p>La libreriaJAVA, come nel suo nome, è stata sviluppata utilizzando Java tramite l'uso della libreria Swing per la creazione dell'interfaccia grafica e dei file di testo per la memorizzazione dei dati.</p>
 
@@ -56,14 +56,6 @@
         <p class="faq-answer">Per aggiungere un libro, clicca sul pulsante "Aggiungi libro"...</p>
 
         <script>
-        function toggleAnswer(id) {
-            var answer = document.getElementById(id);
-            if (answer.style.display === "none") {
-                answer.style.display = "block";
-            } else {
-                answer.style.display = "none";
-            }
-        }
         document.querySelectorAll(".faq-button").forEach(button => {
             button.addEventListener("click", function() {
                 let answer = this.nextElementSibling;
