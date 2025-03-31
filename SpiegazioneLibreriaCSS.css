@@ -41,6 +41,8 @@ img {
         width: 100%;
         box-sizing: border-box; /* Prevent overflow */
         height: auto; /* Allow nav to take as much space as it needs */
+        transition: max-height 0.3s ease-in-out;
+    overflow: hidden; /* Prevent scrollbars during animation */
     }
     nav a {
         display: block;
@@ -163,10 +165,18 @@ p {
 
 /* Hamburger Menu for Small Screens */
 .menu-icon {
-    display: none;
+    display: block;
+    padding: 0.625em;
+    background-color: rgb(198, 11, 49);
+    color: white;
+    text-align: center;
+    width: 100%;
     font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 0.3125em;
     cursor: pointer;
 }
+
 
 /* Responsive for smaller devices */
 @media (max-width: 48em) { /* 768px = 48em */
@@ -188,10 +198,14 @@ p {
         text-align: center;
     }
 }
-.menu-close nav {
-    display: none; /* Hide nav links */
+.menu-close {
+    display: none; /* Fully hide nav links */
+    max-height: 0;
 }
-.menu-open nav {
-    display: flex; /* Show nav links */
+
+.menu-open {
+    display: flex; /* Show the nav */
     flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center menu items */
+    max-height: 500px;
 }
