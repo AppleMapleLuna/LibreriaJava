@@ -9,9 +9,8 @@
 <body>
      <!-- Mobile Navigation -->
      <div class="menu-icon" onclick="toggleMenu()">☰ Menu</div>
-     
     <!-- Sezione del nav -->
-    <nav>
+    <nav class="menu-close">
         <a href="#home">INTRODUZIONE</a>
         <a href="#installazione">INSTALLAZIONE</a>
         <a href="#manuale">MANUALE UTENTE</a>
@@ -19,10 +18,19 @@
         <a href="#FAQ">FAQ</a>
         <a href="#footer">Github</a>
         <!-- Per FAQ, fai che gli utenti possano scrivere commenti e che possano essere risposti-->
+
+        <script>
+            function toggleMenu() {
+                const nav = document.getElementById('navbar');
+                nav.classList.toggle('menu-open');
+                nav.classList.toggle('menu-close');
+            }
+        </script>
     </nav>
+    
     <section id="home">
         <img src="libreriajava.png" alt="Immagine del programma LIBRERIA">
-
+        
         <h1>Introduzione alla LIBRERIA</h1>
         <img src="" alt="Immagine del programma LIBRERIA">
         <p>La LIBRERIA è un archivio di dati che ti consente di inserire libri, eliminarli, modificarli e cercarli per alcuni criteri.</p>
@@ -45,7 +53,7 @@
 <h2>Ricerca per titolo</h2>
 <p>Puoi cercare un libro per titolo cliccando sul pulsante "Cerca". Inserisci il titolo del libro e visualizza i risultati.</p>
     </section>
-    <section id="creazione">\
+    <section id="creazione">
         <h1>Come è stato creato la Libreria?</h1>
         <p>La libreriaJAVA, come nel suo nome, è stata sviluppata utilizzando Java tramite l'uso della libreria Swing per la creazione dell'interfaccia grafica e dei file di testo per la memorizzazione dei dati.</p>
 

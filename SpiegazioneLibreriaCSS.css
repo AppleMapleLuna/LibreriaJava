@@ -188,3 +188,10 @@ p {
         text-align: center;
     }
 }
+.menu-close nav {
+    display: none; /* Hide nav links */
+}
+.menu-open nav {
+    display: flex; /* Show nav links */
+    flex-direction: column; /* Stack links vertically */
+}
