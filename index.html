@@ -75,10 +75,15 @@
 
     <script>
         function toggleMenu() {
-            const nav = document.getElementById('navbar');
-            nav.classList.toggle('menu-open');
-            nav.classList.toggle('menu-close');
+          const nav = document.getElementById('navbar');
+          if (nav.classList.contains('menu-close')) {
+            nav.classList.remove('menu-close');
+            nav.classList.add('menu-open');
+          } else {
+            nav.classList.remove('menu-open');
+            nav.classList.add('menu-close');
+          }
         }
-    </script>
+      </script>
 </body>
 </html>
