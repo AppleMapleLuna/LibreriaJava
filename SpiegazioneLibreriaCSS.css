@@ -7,7 +7,7 @@ html {
 body {
     background-color: rgb(255, 226, 203);
     font-size: 1rem; /* 1rem = 16px */
-    padding-top: 4.5em; /* Space for fixed navigation - adjusted */
+    padding-top: 4.5em; /* Space for fixed navigation */
     margin: 0;
     box-sizing: border-box; /* Make sure padding doesn't affect layout */
 }
@@ -35,17 +35,18 @@ img {
     nav {
         flex-direction: column;
         align-items: center;
-        padding: 1em;
+        padding: 0.625em;  /* Reduced padding to save space */
         position: relative; /* Change fixed positioning to relative */
         margin-top: 0; /* Remove margin at the top of nav */
         width: 100%;
         box-sizing: border-box; /* Prevent overflow */
+        height: auto; /* Allow nav to take as much space as it needs */
     }
     nav a {
         display: block;
         width: 100%;
         text-align: center;
-        padding: 1em;
+        padding: 0.625em;  /* Reduced padding to save space */
         font-size: 1.2em;
         font-weight: bold;
     }
@@ -96,6 +97,7 @@ nav {
     z-index: 1000; /* Ensure nav is always on top */
     width: 100%;
     box-sizing: border-box; /* Prevent overflow */
+    height: auto; /* Adjust height to be dynamic */
 }
 
 nav a {
