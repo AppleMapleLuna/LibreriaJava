@@ -1,18 +1,17 @@
-/* poi aggiungi codice */
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-}
-
-body {
+  }
+  
+  body {
     background-color: rgb(255, 226, 203);
     font-size: 1rem; /* 1rem = 16px */
-    padding-top: 3.75em; /* Added space for the sticky navigation */
+    padding-top: 3.75em; /* Space for the sticky navigation */
     margin: 0;
-    box-sizing: border-box; /* Make sure padding doesn't affect layout */
-}
-
-section {
+    box-sizing: border-box;
+  }
+  
+  section {
     margin: 1.25em auto;
     padding: 1.25em;
     width: 90%;
@@ -20,91 +19,88 @@ section {
     background-color: white;
     border-radius: 1em;
     box-sizing: border-box;
-}
-
-/* Make images scale well across screen sizes */
-img {
+  }
+  
+  img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: auto;
-}
-
-/* Media consente di cambiare il modo in cui mostra alcuni componenti su diversi device */
-@media (max-width: 48em) { /* 768px = 48em */
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 48em) { /* 768px */
     nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 0.3em; /* Padding */
-        position: relative; /* Change fixed positioning to relative */
-        margin-top: 0; /* Remove margin at the top of nav */
-        width: 100%;
-        box-sizing: border-box; /* Prevent overflow */
-        height: auto; /* Allow nav to take as much space as it needs */
-        transition: max-height 0.3s ease-in-out;
-    overflow: hidden; /* Prevent scrollbars during animation */
+      flex-direction: column;
+      align-items: center;
+      padding: 0.3em;
+      position: relative;
+      margin-top: 0;
+      width: 100%;
+      box-sizing: border-box;
+      height: auto;
+      transition: max-height 0.3s ease-in-out;
+      overflow: hidden;
     }
     nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 0.5em;  /* Reduced padding to save space */
-        font-size: 1em;
-        flex-wrap: wrap;
-        font-weight: bold;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.5em;
+      font-size: 1em;
+      font-weight: bold;
     }
     img {
-        max-width: 100%;   /* Make images scale with screen size */
-        height: auto;      /* Maintain aspect ratio */
+      max-width: 100%;
+      height: auto;
     }
     h1 {
-        font-size: 1.5em;  /* Adjust font size for smaller screens */
-        margin: 1.25em auto; /* Margin to keep title from touching edges */
+      font-size: 1.5em;
+      margin: 1.25em auto;
     }
-    
     p {
-        font-size: 1em;  /* Adjust text size for better readability on mobile */
+      font-size: 1em;
     }
-}
-
-@media (max-width: 30em) { /* 480px = 30em */
+  }
+  
+  @media (max-width: 30em) { /* 480px */
     body {
-        font-size: 0.875em;  /* Reduce font size for very small screens */
+      font-size: 0.875em;
     }
     h1 {
-        font-size: 1.125em;
-        margin: 1.125em auto; /* Keep some margin to avoid edge overflow */
+      font-size: 1.125em;
+      margin: 1.125em auto;
     }
     p {
-        font-size: 0.875em;
+      font-size: 0.875em;
     }
     section {
-        padding: 0.9375em; /* Reduce padding */
+      padding: 0.9375em;
     }
-}
-
-/* Navigation styles */
-nav {
+  }
+  
+  /* Navigation Default Styles */
+  nav {
     background-color: rgb(146, 11, 11);
     margin: 0;
     padding: 0.625em;
-    display: flex; /* Enable Flexbox */
-    justify-content: center; /* Center elements horizontally */
-    gap: 1.25em; 
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
     border-radius: 1em;
     box-shadow: 0 0.25em 0.375em rgba(38, 1, 1, 0.25);
-    position: sticky; /* Stick the navbar to the top */
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure nav is always on top */
+    z-index: 1000;
     width: 100%;
-    box-sizing: border-box; /* Prevent overflow */
-    height: auto; /* Adjust height to be dynamic */
-}
-
-nav a {
-    font-size: 1.25em; /* Adjust font size for better readability */
+    box-sizing: border-box;
+    height: auto;
+  }
+  
+  nav a {
+    font-size: 1.25em;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 1.25em;
@@ -112,41 +108,41 @@ nav a {
     text-decoration: none;
     background-color: rgb(198, 11, 49);
     border: 0.125em solid rgb(255, 131, 152);
-    border-radius: 0.3125em; /* Rounded corners for the links */
+    border-radius: 0.3125em;
     box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.4);
-    transition: background-color 0.5s, transform 0.5s; /* Smooth transition */
-}
-
-nav a:hover {
+    transition: background-color 0.5s, transform 0.5s;
+  }
+  
+  nav a:hover {
     background-color: crimson;
     border-color: pink;
     font-weight: bolder;
     box-shadow: 0 0.25em 0.375em rgba(38, 1, 1, 0.25);
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-h1 {
+    transform: scale(1.05);
+  }
+  
+  h1 {
     text-align: center;
     background-color: rgb(210, 32, 0);
     border: 0.625em double peachpuff;
     border-radius: 0.625em;
     color: rgb(255, 232, 213);
     padding: 1.25em;
-    margin: 2em auto; /* Adjusted margin to avoid overlap */
+    margin: 2em auto;
     font-weight: bolder;
     font-size: 2em;
     box-sizing: border-box;
-}
-
-p {
+  }
+  
+  p {
     background-color: rgb(250, 229, 214);
     padding: 0.625em;
     margin: 0px 1.5625em;
     box-sizing: border-box;
-}
-
-/* FAQ Button */
-.faq-button {
+  }
+  
+  /* FAQ Button */
+  .faq-button {
     background-color: #c60b30;
     color: white;
     border: none;
@@ -154,17 +150,17 @@ p {
     cursor: pointer;
     border-radius: 0.3125em;
     font-size: 1rem;
-}
-
-.faq-answer {
+  }
+  
+  .faq-answer {
     display: none;
     padding: 0.625em;
     background-color: #f8f8f8;
     border-left: 0.1875em solid #c60b30;
-}
-
-/* Hamburger Menu for Small Screens */
-.menu-icon {
+  }
+  
+  /* Hamburger Menu for Small Screens */
+  .menu-icon {
     display: block;
     padding: 0.625em;
     background-color: rgb(198, 11, 49);
@@ -175,37 +171,27 @@ p {
     font-weight: bold;
     border-radius: 0.3125em;
     cursor: pointer;
-}
-
-
-/* Responsive for smaller devices */
-@media (max-width: 48em) { /* 768px = 48em */
-    .menu-icon {
-        display: block;
-        padding: 0.625em;
-        background-color: rgb(198, 11, 49);
-        color: white;
-        text-align: center;
-        width: 100%;
-        font-size: 1.5em;
-        font-weight: bold;
-        border-radius: 0.3125em;
-    }
-
-    .menu-open nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-}
-.menu-close {
-    display: none; /* Fully hide nav links */
+  }
+  
+  /* Toggle Classes */
+  .menu-close {
+    display: none;
     max-height: 0;
-}
-
-.menu-open {
-    display: flex; /* Show the nav */
-    flex-direction: column; /* Stack links vertically */
-    align-items: center; /* Center menu items */
+  }
+  
+  .menu-open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-height: 500px;
-}
+  }
+  
+  /* Adjust anchors when nav is open on mobile */
+  @media (max-width: 48em) {
+    nav.menu-open a {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
