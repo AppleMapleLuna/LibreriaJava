@@ -246,10 +246,11 @@ tr:hover td {
   justify-content: center;/*elementi per l'asse orizzontale*/
   position: relative;     /*Vengono posizionati normalmente ma possono essere spostati*/
   width: 100%;
-  max-width: 48em;
+  max-width: 64em;
   height: auto;
   overflow: hidden;
   border-radius: 1em;
+  margin: 0 auto;       /*Centralizza il carosello dentro il contenitore in cui è*/
 }
 
 .galleria {
@@ -270,6 +271,7 @@ tr:hover td {
 @media (max-width: 48em){
   .carosello{
     max-width: 90%;     /*Facciamo in modo che il carosello si adatti alla grandezza dello schermo utilizzato*/
+    margin: 0 auto;     /*Assicuriamo che il carosello rimane al centro*/
   }
 }
 

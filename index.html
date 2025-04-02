@@ -148,6 +148,11 @@
             const nextButton = document.getElementById("successivo");
             const prevButton = document.getElementById("precedente");
             let contatore = 0;
+
+            // debug logs (per vedere dove è andato storto)
+    console.log(nextButton); // Should log the button element
+    console.log(prevButton); // Should log the button element
+
             if (nextButton && prevButton) {     // per evitare che i bottoni non rispondano più perché si erano caricati prima del DOM
                 nextButton.addEventListener("click", function () {
                 immagine[contatore].classList.remove("active");
