@@ -105,9 +105,9 @@
 
     <!-- FAQ -->
     <section id="FAQ">
-        <h1>Contatti</h1>
+        <h1>Domande?</h1>
         <p>Se vuoi chiedere una domanda, compila pure questo modulo!</p>
-        <form>
+        <form action="mailto:hu.chenxi@einaudicorreggio.it" method="post" enctype="text/plain">
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required>
             
@@ -153,7 +153,7 @@
         <p>&copy; 2025 LibreriaJAVA. Sviluppato da tu-lo-sai-chi.</p>
         <p>Email: <a href="mailto:hu.chenxi@einaudicorreggio.it">hu.chenxi@einaudicorreggio.it</a></p>
         <p>Telefono: 123456789</p>
-        <p>Seguimi su: <a href="https://www.youtube.com/c/VioletcreamLunaHoP"></a>Youtube</p>
+        <p>Seguimi su: <a href="https://www.youtube.com/c/VioletcreamLunaHoP" target="_blank">Youtube</a></p>
     </section>
 
     <script>
@@ -187,7 +187,6 @@
             }
         });
 
-            
             const immagine = document.querySelectorAll(".galleria img");
             const nextButton = document.getElementById("successivo");
             const prevButton = document.getElementById("precedente");
@@ -206,6 +205,9 @@
                 immagine[contatore].classList.add("active");
             });
             }
+        
+            // FORM
+
       </script>
 </body>
 </html>
