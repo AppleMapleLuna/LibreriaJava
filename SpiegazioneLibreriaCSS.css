@@ -229,7 +229,7 @@ th, td {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 th{
-  background-color: rgb(255, 218, 218);
+  background-color: rgb(255, 243, 218);
 }
 tr:hover td {
   background-color: rgb(165, 0, 33); /* Highlights rows on hover */
