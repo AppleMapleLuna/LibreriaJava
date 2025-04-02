@@ -212,3 +212,12 @@ html {
         white-space: nowrap; /* Lascia che il testo non si unisca al resto del testo */
     }
 }
+table{
+  border-radius: 0.625em;
+}
+th, td {
+  border: 0.125em solid rgb(74, 0, 15);
+  padding: 0.625em;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
