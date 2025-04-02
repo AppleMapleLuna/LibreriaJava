@@ -132,6 +132,33 @@
             nav.classList.add('menu-close');
           }
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const immagine = document.querySelectorAll(".galleria img");
+        let contatore = 0;
+
+        document.getElementById("successivo").addEventListener("click", function () {
+            immagine[contatore].classList.remove("active");
+            contatore = (contatore + 1) % immagine.length;
+            immagine[contatore].classList.add("active");
+        });
+
+        document.getElementById("precedente").addEventListener("click", function () {
+            immagine[contatore].classList.remove("active");
+            contatore = (contatore - 1 + immagine.length) % immagine.length;
+            immagine[contatore].classList.add("active");
+        });
+
+        let currentIndex = 0;
+
+        function showNextImage() {
+            immagine[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % immagine.length;
+            immagine[currentIndex].classList.add("active");
+        }
+
+        setInterval(showNextImage, 5000);
+        })
       </script>
 </body>
 </html>
