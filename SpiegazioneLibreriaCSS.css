@@ -243,12 +243,14 @@ tr:hover td {
 
 .carosello {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 400px;
+  align-items: center;    /*elementi per l'asse verticale*/
+  justify-content: center;/*elementi per l'asse orizzontale*/
+  position: relative;     /*Vengono posizionati normalmente ma possono essere spostati*/
+  width: 100%;
+  max-width: 48em;
+  height: auto;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 1em;
 }
 
 .galleria {
@@ -259,10 +261,17 @@ tr:hover td {
 
 .galleria img {
   width: 100%;
+  height: auto;
   opacity: 0;
   visibility: hidden;
   position: absolute;
   transition: opacity 1s ease-in-out;
+}
+
+@media (max-width: 48em){
+  .carosello{
+    max-width: 90%;     /*Facciamo in modo che il carosello si adatti alla grandezza dello schermo utilizzato*/
+  }
 }
 
 .galleria img.active {
