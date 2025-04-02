@@ -233,8 +233,7 @@ th{
   background-color: rgb(255, 243, 218);
 }
 tr:hover td {
-  background-color: rgb(165, 0, 33); /* Highlights rows on hover */
-  color: white; /* White text for hover effect */
+  background-color: rgb(255, 251, 231); /* Si evidenzia quando metti il mouse sopra */
   transition: background-color 0.7s ease-in-out, color 0.7s ease-in-out;
 }
 
