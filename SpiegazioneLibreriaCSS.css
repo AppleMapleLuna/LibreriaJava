@@ -211,13 +211,20 @@ html {
         border-radius: 0.5em;
         white-space: nowrap; /* Lascia che il testo non si unisca al resto del testo */
     }
+
+    p{
+      font-size: 1.10em;
+    }
 }
 table{
   border-radius: 0.625em;
 }
 th, td {
-  border: 0.125em solid rgb(74, 0, 15);
+  border: 0.125em solid rgb(48, 0, 10);
   padding: 0.625em;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+th{
+  background-color: rgb(255, 218, 218);
 }
