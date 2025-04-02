@@ -313,3 +313,37 @@ tr:hover td {
   transform: translateY(-50%);
   z-index: 2;
 }
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: auto;
+  max-width: 48em;
+  align-items: stretch;
+}
+form input, form textarea, form button {  /*Aggiunge un bordo carino al forum*/
+  padding: 0.75em;
+  border: 1px solid #000000;
+  border-radius: 0.5em;
+}
+form button {
+  align-self: stretch; /* Ensure it stretches to the form width */
+  position: static; /* Override any inherited absolute positioning */
+  background-color: #ffbd77;
+  color:black;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  padding: 1em 2em;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+  margin-top: 1.5em;
+}
+
+
+form button:hover {
+  background-color: #ffa36a;
+  transform: scale(1.05em);
+}
