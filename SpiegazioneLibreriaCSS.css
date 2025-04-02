@@ -144,6 +144,7 @@ html {
   
   /* FAQ */
   .faq-button {
+    position: static; /*Non utilizzare la posizione assoluta degli altri bottoni >:(*/
     background-color: #c60b30;
     color: white;
     border: none;
@@ -270,20 +271,6 @@ tr:hover td {
   position: relative;
 }
 
-button {
-  position: absolute; /* Likely affects the submit button */
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-
 #precedente {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
@@ -293,7 +280,7 @@ button {
   cursor: pointer;
   font-size: 20px;
   top: 50%;
-  left: 10px; /* Aligns the button to the left of the carosello */
+  left: 10px; /*Mette il bottone a sinistra */
   transform: translateY(-50%);
   z-index: 2;
 }
@@ -307,7 +294,7 @@ button {
   cursor: pointer;
   font-size: 20px;
   top: 50%;
-  right: 10px; /* Aligns the button to the right of the carosello */
+  right: 10px; /* Mette il bottone a destra */
   transform: translateY(-50%);
   z-index: 2;
 }

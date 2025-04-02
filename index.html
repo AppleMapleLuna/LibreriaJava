@@ -122,6 +122,7 @@
     </section>
 
     <script>
+        // MENU
         function toggleMenu() {
           const nav = document.getElementById('navbar');
           if (nav.classList.contains('menu-close')) {
@@ -133,6 +134,15 @@
           }
         }
 
+        // FAQ
+        document.querySelectorAll(".faq-button").forEach(button => {
+        button.addEventListener("click", function () {
+                const answer = this.nextElementSibling;
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+            });
+        });
+
+        // Eventi
         document.addEventListener("DOMContentLoaded", function () {
         const immagine = document.querySelectorAll(".galleria img");
         let contatore = 0;
@@ -149,15 +159,6 @@
             immagine[contatore].classList.add("active");
         });
 
-        let currentIndex = 0;
-
-        function showNextImage() {
-            immagine[currentIndex].classList.remove("active");
-            currentIndex = (currentIndex + 1) % immagine.length;
-            immagine[currentIndex].classList.add("active");
-        }
-
-        setInterval(showNextImage, 5000);
         })
       </script>
 </body>
