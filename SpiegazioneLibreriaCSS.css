@@ -1,3 +1,4 @@
+/* Standard */
 html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -28,7 +29,7 @@ html {
     margin: auto;
   }
   
-  /* Mobile styles */
+  /* Per schermi piccoli */
   @media (max-width: 48em) { /* 768px */
     nav {
       flex-direction: column;
@@ -79,7 +80,7 @@ html {
     }
   }
   
-  /* nav di default */
+  /* standard */
   nav {
     background-color: rgb(146, 11, 11);
     margin: 0;
@@ -141,7 +142,7 @@ html {
     box-sizing: border-box;
   }
   
-  /* FAQ Button */
+  /* FAQ */
   .faq-button {
     background-color: #c60b30;
     color: white;
@@ -159,7 +160,7 @@ html {
     border-left: 0.1875em solid #c60b30;
   }
   
-  /* Hamburger Menu for Small Screens */
+  /* MENU */
   .menu-icon {
     display: block;
     padding: 0.625em;
@@ -216,6 +217,8 @@ html {
       font-size: 1.10em;
     }
 }
+
+/* Tabella */
 table{
   border-radius: 0.625em;
 }
@@ -227,4 +230,84 @@ th, td {
 }
 th{
   background-color: rgb(255, 218, 218);
+}
+tr:hover td {
+  background-color: rgb(165, 0, 33); /* Highlights rows on hover */
+  color: white; /* White text for hover effect */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+/*Galleria*/
+
+.carosello {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.galleria {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.galleria img {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+
+.galleria img.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+button {
+  position: absolute; /* Likely affects the submit button */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+
+#precedente {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  top: 50%;
+  left: 10px; /* Aligns the button to the left of the carosello */
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+#successivo {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  top: 50%;
+  right: 10px; /* Aligns the button to the right of the carosello */
+  transform: translateY(-50%);
+  z-index: 2;
 }
