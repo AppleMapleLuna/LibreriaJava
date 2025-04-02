@@ -173,7 +173,7 @@ html {
     cursor: pointer;
   }
   
-  /* Toggle Classes */
+  /*  Classi per l'attivazione e per la disattivazione del menu */
   .menu-close {
     display: none;
     max-height: 0;
@@ -186,7 +186,7 @@ html {
     max-height: 500px;
   }
   
-  /* Adjust anchors when nav is open on mobile */
+  /* Se visualizzato con uno schermo piccolo*/
   @media (max-width: 48em) {
     nav.menu-open a {
       display: block;
@@ -195,3 +195,17 @@ html {
     }
   }
   
+  @media (min-width: 48em) { /* Se visualizzato con uno schermo grande: (768px and above) */
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1em;
+    }
+
+    nav a {
+        font-size: 1.1em;
+        padding: 0.8em 1.5em;
+        border-radius: 0.5em;
+    }
+}
