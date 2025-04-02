@@ -136,26 +136,22 @@
 
         // Eventi
         document.addEventListener("DOMContentLoaded", function () {
-            // faq
-            const faqButtons = document.querySelectorAll(".faq-button");
+        const faqButtons = document.querySelectorAll(".faq-button");
 
-            // Debugging logs
-            console.log(faqButtons); // Should list all FAQ buttons
+        if (faqButtons.length > 0) {
+            faqButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const answer = this.nextElementSibling;
 
-            if (faqButtons.length > 0) {
-                faqButtons.forEach(button => {
-                    button.addEventListener("click", function () {
-                        const answer = this.nextElementSibling;
-                        if (answer) {
-                            answer.style.display = (answer.style.display === "block") ? "none" : "block";
-                        } else {
-                            console.error("FAQ answer element not found for:", button);
-                        }
-                    });
-                });
-            } else {
-                console.error("No FAQ buttons found!");
-            }
+                    if (answer) {
+                        // attiva la visibilità
+                        answer.classList.toggle("active");
+                    } 
+            });
+        });
+    }
+});
+
             
             const immagine = document.querySelectorAll(".galleria img");
             const nextButton = document.getElementById("successivo");
