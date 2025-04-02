@@ -26,6 +26,7 @@ html {
     height: auto;
     display: block;
     margin: auto;
+    padding-bottom: 1em;
   }
   
   /* Mobile styles */
