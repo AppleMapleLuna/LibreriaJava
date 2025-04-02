@@ -160,6 +160,9 @@ html {
     background-color: #f8f8f8;
     border-left: 0.1875em solid #c60b30;
   }
+  .faq-answer.active{
+    display: block;   /*controlliamo la visibilità dei bottoni*/
+  }
   
   /* MENU */
   .menu-icon {
@@ -289,6 +292,7 @@ tr:hover td {
   padding: 10px;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 2em;
   top: 50%;
   left: 10px; /*Mette il bottone a sinistra */
   transform: translateY(-50%);
@@ -299,6 +303,7 @@ tr:hover td {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  border-radius: 2em;
   border: none;
   padding: 10px;
   cursor: pointer;

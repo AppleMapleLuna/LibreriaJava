@@ -134,24 +134,33 @@
           }
         }
 
-        // FAQ
-        document.querySelectorAll(".faq-button").forEach(button => {
-        button.addEventListener("click", function () {
-                const answer = this.nextElementSibling;
-                answer.style.display = answer.style.display === "block" ? "none" : "block";
-            });
-        });
-
         // Eventi
         document.addEventListener("DOMContentLoaded", function () {
+            // faq
+            const faqButtons = document.querySelectorAll(".faq-button");
+
+            // Debugging logs
+            console.log(faqButtons); // Should list all FAQ buttons
+
+            if (faqButtons.length > 0) {
+                faqButtons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        const answer = this.nextElementSibling;
+                        if (answer) {
+                            answer.style.display = (answer.style.display === "block") ? "none" : "block";
+                        } else {
+                            console.error("FAQ answer element not found for:", button);
+                        }
+                    });
+                });
+            } else {
+                console.error("No FAQ buttons found!");
+            }
+            
             const immagine = document.querySelectorAll(".galleria img");
             const nextButton = document.getElementById("successivo");
             const prevButton = document.getElementById("precedente");
             let contatore = 0;
-
-            // debug logs (per vedere dove è andato storto)
-    console.log(nextButton); // Should log the button element
-    console.log(prevButton); // Should log the button element
 
             if (nextButton && prevButton) {     // per evitare che i bottoni non rispondano più perché si erano caricati prima del DOM
                 nextButton.addEventListener("click", function () {
