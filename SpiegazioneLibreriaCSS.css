@@ -195,17 +195,20 @@ html {
     }
   }
   
-  @media (min-width: 48em) { /* Se visualizzato con uno schermo grande: (768px and above) */
+  @media (min-width: 48em) { /* 768px and above */
     nav {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
+        flex-wrap: nowrap; /* Lascia che tutto sia in una riga */
         padding: 1em;
     }
 
     nav a {
+        display: inline-block; /* Blocchi */
         font-size: 1.1em;
         padding: 0.8em 1.5em;
         border-radius: 0.5em;
+        white-space: nowrap; /* Lascia che il testo non si unisca al resto del testo */
     }
 }
